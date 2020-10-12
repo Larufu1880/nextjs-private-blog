@@ -3,10 +3,15 @@
     "module": "commonjs",
     "noEmitOnError": true,
     "outDir": "dist",
-    "jsx": "react",
+    "jsx": "preserve",
     "strict": true,
     "target": "es2015",
-    "lib": ["es2015", "es2016", "es2017", "dom"],
+    "lib": [
+      "es2015",
+      "es2016",
+      "es2017",
+      "dom"
+    ],
     "allowJs": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -16,8 +21,16 @@
     "noUnusedLocals": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "moduleResolution": "node",
+    "isolatedModules": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
