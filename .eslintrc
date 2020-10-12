@@ -1,0 +1,7 @@
+{
+  "extends": ["airbnb-typesciprt/base", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  }
+}
