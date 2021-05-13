@@ -9,4 +9,7 @@ interface IProps {
   title: string;
 }
 
-export const ArticleTitle: React.FC<IProps> = props => <Title>{props.title}</Title>;
+export const ArticleTitle: React.FC<IProps> = props => {
+  const { title } = props;
+  return <Title>{title}</Title>;
+};

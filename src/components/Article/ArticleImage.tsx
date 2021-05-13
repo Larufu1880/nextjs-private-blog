@@ -10,4 +10,7 @@ interface IProps {
   imageAlt: string;
 }
 
-export const ArticleImage: React.FC<IProps> = props => <Image src={props.imageSrc} alt={props.imageAlt} />;
+export const ArticleImage: React.FC<IProps> = props => {
+  const { imageSrc, imageAlt } = props;
+  return <Image src={imageSrc} alt={imageAlt} />;
+};

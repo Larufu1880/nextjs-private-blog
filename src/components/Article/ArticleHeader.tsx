@@ -19,9 +19,12 @@ interface IProps {
   articleTitle: string;
 }
 
-export const ArticleHeader: React.FC<IProps> = props => (
-  <ArticleHeaderWrap>
-    <ArticleTitle title={props.articleTitle} />
-    <ArticleHeaderImage imageSrc={props.imageSrc} imageAlt={props.imageAlt} />
-  </ArticleHeaderWrap>
-);
+export const ArticleHeader: React.FC<IProps> = props => {
+  const { articleTitle, imageSrc, imageAlt } = props;
+  return (
+    <ArticleHeaderWrap>
+      <ArticleTitle title={articleTitle} />
+      <ArticleHeaderImage imageSrc={imageSrc} imageAlt={imageAlt} />
+    </ArticleHeaderWrap>
+  );
+};
