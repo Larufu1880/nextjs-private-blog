@@ -5,7 +5,8 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+    "plugin:jsx-a11y/recommended"
   ],
   "plugins": [
     "@typescript-eslint"
@@ -15,13 +16,12 @@
     "import/resolver": {
       "node": {
         "extensions": [
-          ".js",
-          ".jsx",
           ".json",
           ".ts",
           ".tsx"
         ]
-      }
+      },
+      "typescript": {}
     }
   },
   "rules": {
@@ -29,26 +29,25 @@
       2,
       {
         "extensions": [
-          ".js",
-          ".jsx",
           ".ts",
           ".tsx"
         ]
       }
     ],
     "import/extensions": ["error", "ignorePackages", {
-      "js": "never",
-      "jsx": "never",
       "ts": "never",
       "tsx": "never"
-    }]
+    }],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"]
   },
   "overrides": [
     {
       "files": ["**/*.ts", "**/*.tsx"],
       "rules": {
         "react/prop-types": "off",
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "import/prefer-default-export": "off"
       }
     }
   ]
