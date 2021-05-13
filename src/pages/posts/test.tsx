@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import ReactMarkdown from 'react-markdown';
-import { getBlogEntry } from '../../lib/ContentfulClient';
 import styled from 'styled-components';
+import { getBlogEntry } from '../../lib/ContentfulClient';
 import { ArticleHeader } from '../../components/Article/ArticleHeader';
 
 const Main = styled.main`
@@ -11,15 +11,16 @@ const Main = styled.main`
 `;
 
 const Test: NextPage<IBlogPost> = props => {
+  const { fields } = props;
   return (
     <Main>
       <article>
         <ArticleHeader
-          imageSrc={props.fields.titleImage.fields.file.url}
-          imageAlt={props.fields.title}
-          articleTitle={props.fields.title}
+          imageSrc={fields.titleImage.fields.file.url}
+          imageAlt={fields.title}
+          articleTitle={fields.title}
         />
-        <ReactMarkdown>{props.fields.body}</ReactMarkdown>
+        <ReactMarkdown>{fields.body}</ReactMarkdown>
       </article>
     </Main>
   );
@@ -29,8 +30,8 @@ export async function getStaticProps() {
   const result = await getBlogEntry('3k4pWVMQtUoqr6Z7H0OYGm');
   return {
     props: {
-      ...result,
-    },
+      ...result
+    }
   };
 }
 
