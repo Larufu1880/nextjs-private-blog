@@ -12,5 +12,5 @@ interface IProps {
 
 export const ArticleImage: React.FC<IProps> = props => {
   const { imageSrc, imageAlt } = props;
-  return <Image src={imageSrc} alt={imageAlt} />;
+  return <Image src={imageSrc} alt={imageAlt} height="200px"/>;
 };

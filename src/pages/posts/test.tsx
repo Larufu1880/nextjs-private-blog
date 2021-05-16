@@ -8,6 +8,8 @@ const Main = styled.main`
   max-width: 1000px;
   min-width: 1000px;
   margin: 0 auto;
+  padding-bottom: 10px;
+  background-color: #1a1a1a;
 `;
 
 const Test: NextPage<IBlogPost> = props => {
@@ -20,7 +22,9 @@ const Test: NextPage<IBlogPost> = props => {
           imageAlt={fields.title}
           articleTitle={fields.title}
         />
-        <ReactMarkdown>{fields.body}</ReactMarkdown>
+        <div className="article__body">
+          <ReactMarkdown>{fields.body}</ReactMarkdown>
+        </div>
       </article>
     </Main>
   );

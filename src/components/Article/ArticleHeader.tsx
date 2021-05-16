@@ -13,6 +13,17 @@ const ArticleHeaderImage = styled(ArticleImage)`
   overflow: hidden;
 `;
 
+const ArticleTitleWrapper = styled.div`
+  position: absolute;
+  width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #1a1a1a;
+  bottom: 0;
+  left: 0;
+  right: 0;
+`
+
 interface IProps {
   imageSrc: string;
   imageAlt: string;
@@ -23,8 +34,10 @@ export const ArticleHeader: React.FC<IProps> = props => {
   const { articleTitle, imageSrc, imageAlt } = props;
   return (
     <ArticleHeaderWrap>
-      <ArticleTitle title={articleTitle} />
       <ArticleHeaderImage imageSrc={imageSrc} imageAlt={imageAlt} />
+      <ArticleTitleWrapper>
+        <ArticleTitle title={articleTitle} />
+      </ArticleTitleWrapper>
     </ArticleHeaderWrap>
   );
 };

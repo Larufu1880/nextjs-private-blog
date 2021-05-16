@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 
 const Title = styled.h1`
-  font-size: 0.8rem;
+  font-size: 2.5rem;
 `;
 
 interface IProps {
