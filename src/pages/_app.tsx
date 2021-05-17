@@ -10,6 +10,7 @@ const Header = styled.header`
 const HeaderTitle = styled.h1`
   font-size: 3.0rem;
   text-align: center;
+  font-family: 'Reggae One', cursive;
 `
 
 const HeaderLink = styled.a`

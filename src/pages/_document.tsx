@@ -22,6 +22,8 @@ export default class MyDocument extends Document<Props> {
       <Html lang='ja'>
         <Head>
           <meta charSet='utf-8' />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet" />
           {this.props.styleTags}
         </Head>
         <body>
